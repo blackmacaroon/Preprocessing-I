@@ -126,6 +126,8 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+/****** mixins ******/
+/****** variables ******/
 /****** basic ******/
 * {
   box-sizing: border-box;
@@ -142,17 +144,29 @@ html,
 body {
   font-family: 'Montserrat Alternates', sans-serif;
   height: 100%;
+  font-size: 1rem;
 }
 header {
+  width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+}
+header nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
 }
 header a {
   text-decoration: none;
-  color: black;
-  font-size: 15px;
+  color: #40755c;
+  font-size: 2rem;
+}
+@media (max-width: 515px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 h1,
 h2,
@@ -162,11 +176,31 @@ h5,
 h6 {
   font-weight: 400;
   text-transform: uppercase;
-  line-height: 1.75rem;
+  line-height: 1.75em;
+  font-size: 2rem;
+  color: #40755c;
 }
 img {
   width: 100%;
   height: auto;
+}
+@media (min-width: 880px) {
+  img {
+    width: 50%;
+  }
+}
+table {
+  width: 100%;
+  text-align: right;
+}
+table tr,
+table th,
+table td {
+  padding: 0 20px;
+  border: 1px solid #580a41;
+}
+nav {
+  padding: 30px 0;
 }
 /****** container ******/
 .container {
