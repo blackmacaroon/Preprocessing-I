@@ -126,12 +126,56 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
-/* Set every element's box-sizing to border-box */
+/****** basic ******/
 * {
   box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+html {
+  font-size: 62.5%;
 }
 html,
 body {
   font-family: 'Montserrat Alternates', sans-serif;
   height: 100%;
+}
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+header a {
+  text-decoration: none;
+  color: black;
+  font-size: 15px;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 400;
+  text-transform: uppercase;
+  line-height: 1.75rem;
+}
+img {
+  width: 100%;
+  height: auto;
+}
+/****** container ******/
+.container {
+  margin: 0 auto;
+  max-width: 100%;
+  width: 1140px;
+}
+@media (max-width: 1300px) {
+  .container {
+    width: 80%;
+  }
 }
