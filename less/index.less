@@ -96,10 +96,10 @@ header {
 		display: flex;
 		justify-content: space-evenly
 
-		@media (max-width: 500px){
-			flex-direction: column;
-			justify-content: center;
-		}
+		// @media ( max-width: 515px ) {
+		// 	flex-direction: column;
+		// 	justify-content: center;
+		// }
 	}
 
 	a {
@@ -156,10 +156,16 @@ nav {
 		width: 80%;
 	}
 
-	footer{
-		padding: 30px 0;
+}
+.footer{
+	.center();
+	flex-direction: column;
+	padding: 30px 0;
+
+	.address {
+		text-align: center;
+		color: @primaryColor;
+		padding-bottom: 30px;
 	}
-
-
 }
 

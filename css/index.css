@@ -213,3 +213,15 @@ nav {
     width: 80%;
   }
 }
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 30px 0;
+}
+.footer .address {
+  text-align: center;
+  color: #40755c;
+  padding-bottom: 30px;
+}
