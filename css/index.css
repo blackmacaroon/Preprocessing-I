@@ -190,13 +190,15 @@ img {
   }
 }
 table {
+  table-layout: fixed;
   width: 100%;
   text-align: right;
+  padding-top: 20px;
 }
 table tr,
 table th,
 table td {
-  padding: 0 20px;
+  padding: 20px;
   border: 1px solid #580a41;
 }
 nav {
