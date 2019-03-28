@@ -177,6 +177,11 @@ header p {
     width: 70%;
   }
 }
+@media only screen and (min-width: 320px) and (max-width: 719px) {
+  header p {
+    width: 100%;
+  }
+}
 @media (max-width: 515px) {
   header {
     flex-direction: column;
@@ -216,9 +221,15 @@ img {
   }
 }
 button {
-  color: #40755c;
+  -moz-transition: background-color 0.35s ease-in-out, color 0.35s ease-in-out;
+  -webkit-transition: background-color 0.35s ease-in-out, color 0.35s ease-in-out;
+  -ms-transition: background-color 0.35s ease-in-out, color 0.35s ease-in-out;
+  transition: background-color 0.35s ease-in-out, color 0.35s ease-in-out;
+  background: #580a41;
+  color: #eaeaea;
+  font-size: 1.6rem;
   margin: 20px;
-  padding: 12px 30px;
+  padding: 12px 40px;
   border: 2px solid #580a41;
   border-radius: 30px;
 }
@@ -226,6 +237,11 @@ button {
   button {
     width: 90%;
   }
+}
+button:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #580a41 !important;
+  text-shadow: 0 0 0.5px rgba(255, 255, 255, 0.25) !important;
 }
 /****** container ******/
 .container {
@@ -238,28 +254,30 @@ button {
     width: 80%;
   }
 }
-section .middle {
-  border: 1px solid green;
+.middle {
+  width: 100%;
   display: flex;
   justify-content: space-between;
 }
-.content .card {
-  border: 1px solid red;
-  display: flex;
-  flex-direction: column;
-  width: 40%;
+.card {
+  margin: 20px 0;
 }
-.footer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  padding: 30px 0;
+.sell {
+  text-align: justify;
 }
-.footer .address {
+.skills {
+  background-color: #eaeaea;
+  padding: 20px;
   text-align: center;
-  color: #40755c;
-  padding-bottom: 30px;
+  margin-left: 40px;
+}
+.bottom {
+  width: 100%;
+}
+@media only screen and (min-width: 320px) and (max-width: 719px) {
+  .work-history {
+    display: none;
+  }
 }
 /**** table *****/
 table {
@@ -271,7 +289,7 @@ table tr,
 table th,
 table td {
   padding: 20px;
-  border: 1px solid #580a41;
+  border: 2px solid #eaeaea;
 }
 @media only screen and (min-width: 320px) and (max-width: 719px) {
   table tr,
@@ -280,6 +298,32 @@ table td {
     display: none;
   }
 }
+table th {
+  background-color: #580a41;
+  color: #eaeaea;
+}
 table th:nth-child(1) {
   width: 10%;
+}
+/***** footer *****/
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 30px 0;
+  color: #580a41;
+}
+.footer .address {
+  text-align: center;
+  color: #40755c;
+  padding-bottom: 30px;
+}
+.footer p {
+  padding-top: 20px;
+}
+.foot {
+  border: 2px solid #580a41;
+  border-radius: 30px;
+  padding: 0 40px;
 }

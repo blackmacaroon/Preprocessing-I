@@ -57,14 +57,15 @@ table {
 
 .adjacent(){
 	display: flex;
-	justify-content: space-evenly;
-	width: 40%;
+	justify-content: space-between;
 
 }
 /****** variables ******/
 @primaryColor: #40755c;
 
 @secondaryColor: #580a41;
+
+@tertiaryColor: #eaeaea;
 
 @desktop: ~"only screen and (min-width: 960px) and (max-width: 1199px)";
 
@@ -120,6 +121,10 @@ header {
 		@media @tablet {
 			width: 70%;
 		}
+
+		@media @mobile {
+			width: 100%;
+		}
 	}
 
 	@media ( max-width: 515px ) {
@@ -158,17 +163,28 @@ img {
 }
 
 button {
-	color: @primaryColor;
+	-moz-transition: background-color 0.35s ease-in-out, color 0.35s ease-in-out;
+	-webkit-transition: background-color 0.35s ease-in-out, color 0.35s ease-in-out;
+	-ms-transition: background-color 0.35s ease-in-out, color 0.35s ease-in-out;
+	transition: background-color 0.35s ease-in-out, color 0.35s ease-in-out;
+	background: @secondaryColor;
+	color: @tertiaryColor;
+	font-size: 1.6rem;
 	margin: 20px;
-	padding: 12px 30px;
+	padding: 12px 40px;
 	border: 2px solid @secondaryColor;
 	border-radius: 30px;
 
 	@media @mobile {
 		width: 90%;
 	}
-
 }
+button:hover {
+	background: rgba(255, 255, 255, 0.1);
+	color: @secondaryColor !important;
+	text-shadow: 0 0 0.5px rgba(255, 255, 255, 0.25) !important;
+}
+
 
 /****** container ******/
 .container {
@@ -182,31 +198,32 @@ button {
 
 }
 
-section .middle {
-	border: 1px solid green;
-	display: flex;
-	justify-content: space-between;
-	
+.middle {
+	width: 100%;
+	.adjacent();
 }
 
+.card {
+	margin: 20px 0;
+}
+.sell {
+	text-align: justify;
+}
 
+.skills{
+	background-color: @tertiaryColor;
+	padding: 20px;
+	text-align: center;
+	margin-left: 40px;
+}
 
-	.content .card {
-		border: 1px solid red;
-		display: flex;
-		flex-direction: column;
-		width: 40%;
-	}
+.bottom {
+	width: 100%;
+}
 
-.footer{
-	.center();
-	flex-direction: column;
-	padding: 30px 0;
-
-	.address {
-		text-align: center;
-		color: @primaryColor;
-		padding-bottom: 30px;
+.work-history {
+	@media @mobile {
+		display: none;
 	}
 }
 
@@ -218,14 +235,42 @@ table {
 
 	tr, th, td {
 		padding: 20px;
-		border: 1px solid @secondaryColor;
+		border: 2px solid @tertiaryColor;
 
 		@media @mobile {
 			display: none;
 		}
 	}
 
+	th {
+		background-color: @secondaryColor;
+		color: @tertiaryColor;
+	}
+
 	th:nth-child(1) {
 		width: 10%;    
 	}	
+}
+
+/***** footer *****/
+.footer{
+	.center();
+	flex-direction: column;
+	padding: 30px 0;
+	color: @secondaryColor;
+
+	.address {
+		text-align: center;
+		color: @primaryColor;
+		padding-bottom: 30px;
+	}
+	p{ 
+		padding-top: 20px;
+	}
+}
+
+.foot {
+	border: 2px solid @secondaryColor;
+	border-radius: 30px;
+	padding: 0 40px;
 }
