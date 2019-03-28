@@ -88,6 +88,7 @@ html, body {
 	font-family: 'Montserrat Alternates', sans-serif;
 	height: 100%;
 	font-size: 1rem;
+	line-height: 1.5em;
 	
 }
 
@@ -96,23 +97,29 @@ header {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-
-	nav {
-		width: 100%;
-		display: flex;
-		justify-content: space-evenly
-
-		// @media ( max-width: 500px ) {
-		// 	flex-direction: column;
-		// 	justify-content: center;
-		// }
-	}
-
+	
 	a {		
 		text-decoration: none;
 		color: @primaryColor;
 		font-size: 2rem;
 
+		@media @mobile {
+			font-size: 1.5rem;
+		}
+
+	}
+
+	p {
+		text-align: justify;
+		width: 50%;
+
+		@media @desktop {
+			width: 60%;
+		}
+
+		@media @tablet {
+			width: 70%;
+		}
 	}
 
 	@media ( max-width: 515px ) {
@@ -129,6 +136,14 @@ h1, h2, h3, h4, h5, h6 {
 	color: @primaryColor;
 }
 
+nav {
+	padding: 30px 0;
+	width: 100%;
+	display: flex;
+	justify-content: space-evenly;
+
+}
+
 img {
 	width: 100%;
 	height: auto;
@@ -140,12 +155,21 @@ img {
 	@media @tablet {
 		width: 70%;
 	}
+}
+
+button {
+	color: @primaryColor;
+	margin: 20px;
+	padding: 12px 30px;
+	border: 2px solid @secondaryColor;
+	border-radius: 30px;
+
+	@media @mobile {
+		width: 90%;
+	}
 
 }
 
-nav {
-	padding: 30px 0;
-}
 /****** container ******/
 .container {
 	margin: 0 auto;
@@ -158,10 +182,21 @@ nav {
 
 }
 
-.content .bottom {
+section .middle {
+	border: 1px solid green;
+	display: flex;
+	justify-content: space-between;
 	
 }
 
+
+
+	.content .card {
+		border: 1px solid red;
+		display: flex;
+		flex-direction: column;
+		width: 40%;
+	}
 
 .footer{
 	.center();
@@ -186,9 +221,7 @@ table {
 		border: 1px solid @secondaryColor;
 
 		@media @mobile {
-			padding: 0;
-			margin: 0;
-			
+			display: none;
 		}
 	}
 

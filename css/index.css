@@ -145,6 +145,7 @@ body {
   font-family: 'Montserrat Alternates', sans-serif;
   height: 100%;
   font-size: 1rem;
+  line-height: 1.5em;
 }
 header {
   width: 100%;
@@ -152,15 +153,29 @@ header {
   flex-direction: column;
   align-items: center;
 }
-header nav {
-  width: 100%;
-  display: flex;
-  justify-content: space-evenly;
-}
 header a {
   text-decoration: none;
   color: #40755c;
   font-size: 2rem;
+}
+@media only screen and (min-width: 320px) and (max-width: 719px) {
+  header a {
+    font-size: 1.5rem;
+  }
+}
+header p {
+  text-align: justify;
+  width: 50%;
+}
+@media only screen and (min-width: 960px) and (max-width: 1199px) {
+  header p {
+    width: 60%;
+  }
+}
+@media only screen and (min-width: 720px) and (max-width: 959px) {
+  header p {
+    width: 70%;
+  }
 }
 @media (max-width: 515px) {
   header {
@@ -180,6 +195,12 @@ h6 {
   font-size: 2rem;
   color: #40755c;
 }
+nav {
+  padding: 30px 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
 img {
   width: 100%;
   height: auto;
@@ -194,8 +215,17 @@ img {
     width: 70%;
   }
 }
-nav {
-  padding: 30px 0;
+button {
+  color: #40755c;
+  margin: 20px;
+  padding: 12px 30px;
+  border: 2px solid #580a41;
+  border-radius: 30px;
+}
+@media only screen and (min-width: 320px) and (max-width: 719px) {
+  button {
+    width: 90%;
+  }
 }
 /****** container ******/
 .container {
@@ -207,6 +237,17 @@ nav {
   .container {
     width: 80%;
   }
+}
+section .middle {
+  border: 1px solid green;
+  display: flex;
+  justify-content: space-between;
+}
+.content .card {
+  border: 1px solid red;
+  display: flex;
+  flex-direction: column;
+  width: 40%;
 }
 .footer {
   display: flex;
@@ -236,8 +277,7 @@ table td {
   table tr,
   table th,
   table td {
-    padding: 0;
-    margin: 0;
+    display: none;
   }
 }
 table th:nth-child(1) {
