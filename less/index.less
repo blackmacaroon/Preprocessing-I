@@ -65,6 +65,12 @@ table {
 @primaryColor: #40755c;
 
 @secondaryColor: #580a41;
+
+@desktop: ~"only screen and (min-width: 960px) and (max-width: 1199px)";
+
+@tablet: ~"only screen and (min-width: 720px) and (max-width: 959px)";
+
+@mobile: ~"only screen and (min-width: 320px) and (max-width: 719px)";
 /****** basic ******/
 * {
     box-sizing: border-box;
@@ -127,22 +133,14 @@ img {
 	width: 100%;
 	height: auto;
 
-	@media ( min-width: 880px ) {
-		width: 50%;
-		
+	@media @desktop {
+		width: 50%;	
 	}
-}
 
-table {
-	table-layout: fixed;
-	width: 100%;
-	text-align: right;
-	padding-top: 20px;
-
-	tr, th, td {
-		padding: 20px;
-		border: 1px solid @secondaryColor;
+	@media @tablet {
+		width: 70%;
 	}
+
 }
 
 nav {
@@ -177,3 +175,24 @@ nav {
 	}
 }
 
+/**** table *****/
+table {
+	width: 100%;
+	text-align: right;
+	padding-top: 20px;
+
+	tr, th, td {
+		padding: 20px;
+		border: 1px solid @secondaryColor;
+
+		@media @mobile {
+			padding: 0;
+			margin: 0;
+			
+		}
+	}
+
+	th:nth-child(1) {
+		width: 10%;    
+	}	
+}

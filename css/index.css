@@ -184,22 +184,15 @@ img {
   width: 100%;
   height: auto;
 }
-@media (min-width: 880px) {
+@media only screen and (min-width: 960px) and (max-width: 1199px) {
   img {
     width: 50%;
   }
 }
-table {
-  table-layout: fixed;
-  width: 100%;
-  text-align: right;
-  padding-top: 20px;
-}
-table tr,
-table th,
-table td {
-  padding: 20px;
-  border: 1px solid #580a41;
+@media only screen and (min-width: 720px) and (max-width: 959px) {
+  img {
+    width: 70%;
+  }
 }
 nav {
   padding: 30px 0;
@@ -226,4 +219,27 @@ nav {
   text-align: center;
   color: #40755c;
   padding-bottom: 30px;
+}
+/**** table *****/
+table {
+  width: 100%;
+  text-align: right;
+  padding-top: 20px;
+}
+table tr,
+table th,
+table td {
+  padding: 20px;
+  border: 1px solid #580a41;
+}
+@media only screen and (min-width: 320px) and (max-width: 719px) {
+  table tr,
+  table th,
+  table td {
+    padding: 0;
+    margin: 0;
+  }
+}
+table th:nth-child(1) {
+  width: 10%;
 }
