@@ -126,8 +126,8 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
-/****** mixins ******/
 /****** variables ******/
+/****** mixins ******/
 /****** basic ******/
 * {
   box-sizing: border-box;
@@ -146,6 +146,7 @@ body {
   height: 100%;
   font-size: 1rem;
   line-height: 1.5em;
+  color: #5c575e;
 }
 header {
   width: 100%;
@@ -155,7 +156,7 @@ header {
 }
 header a {
   text-decoration: none;
-  color: #40755c;
+  color: #2d6209;
   font-size: 2rem;
 }
 @media only screen and (min-width: 320px) and (max-width: 719px) {
@@ -198,7 +199,7 @@ h6 {
   text-transform: uppercase;
   line-height: 1.75em;
   font-size: 2rem;
-  color: #40755c;
+  color: #2d6209;
 }
 nav {
   padding: 30px 0;
@@ -221,16 +222,13 @@ img {
   }
 }
 button {
-  -moz-transition: background-color 0.35s ease-in-out, color 0.35s ease-in-out;
-  -webkit-transition: background-color 0.35s ease-in-out, color 0.35s ease-in-out;
-  -ms-transition: background-color 0.35s ease-in-out, color 0.35s ease-in-out;
   transition: background-color 0.35s ease-in-out, color 0.35s ease-in-out;
-  background: #580a41;
-  color: #eaeaea;
+  background: #b5b5b5;
+  color: #5c575e;
   font-size: 1.6rem;
   margin: 20px;
   padding: 12px 40px;
-  border: 2px solid #580a41;
+  border: 2px solid #5c575e;
   border-radius: 30px;
 }
 @media only screen and (min-width: 320px) and (max-width: 719px) {
@@ -240,8 +238,9 @@ button {
 }
 button:hover {
   background: rgba(255, 255, 255, 0.1);
-  color: #580a41 !important;
-  text-shadow: 0 0 0.5px rgba(255, 255, 255, 0.25) !important;
+  border: 2px solid #5c575e;
+  color: #5c575e;
+  text-shadow: 0 0 0.5px rgba(255, 255, 255, 0.25);
 }
 /****** container ******/
 .container {
@@ -266,7 +265,7 @@ button:hover {
   text-align: justify;
 }
 .skills {
-  background-color: #eaeaea;
+  background-color: #b5b5b5;
   padding: 20px;
   text-align: center;
   margin-left: 40px;
@@ -289,7 +288,7 @@ table tr,
 table th,
 table td {
   padding: 20px;
-  border: 2px solid #eaeaea;
+  border: 2px solid #b5b5b5;
 }
 @media only screen and (min-width: 320px) and (max-width: 719px) {
   table tr,
@@ -299,8 +298,8 @@ table td {
   }
 }
 table th {
-  background-color: #580a41;
-  color: #eaeaea;
+  background-color: #2d6209;
+  color: #b5b5b5;
 }
 table th:nth-child(1) {
   width: 10%;
@@ -312,18 +311,18 @@ table th:nth-child(1) {
   align-items: center;
   flex-direction: column;
   padding: 30px 0;
-  color: #580a41;
+  color: #2d6209;
 }
 .footer .address {
   text-align: center;
-  color: #40755c;
+  color: #5c575e;
   padding-bottom: 30px;
 }
 .footer p {
   padding-top: 20px;
 }
 .foot {
-  border: 2px solid #580a41;
+  border: 2px solid #2d6209;
   border-radius: 30px;
   padding: 0 40px;
 }
